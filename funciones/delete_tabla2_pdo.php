@@ -2,7 +2,7 @@
 require_once("conexion_PDO.php");
 $id = $_GET['nid'];
 
-$sql = "DELETE FROM productos where id=?";
+$sql = "DELETE FROM productos where id='$id'";
 //la consulta
 
 //Preparamos la consulta sql

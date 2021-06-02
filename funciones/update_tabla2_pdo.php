@@ -1,12 +1,13 @@
 <?php
-require_once("conexion.php");
+require_once("../conexionPDO.php");
 
-$n = strtoupper($_POST['nombre']);
+$i = strtoupper($_POST['id']);
+$n = $_POST['nombre'];
 $t = $_POST['tipo'];
 $p = $_POST['precio'];
 $e = $_POST['existencia'];
 
-$res = mysqli_query($con, "INSERT INTO productos(id, descrip, tipo, precio, existencia) VALUES(NULL, '$n', '$t', '$p', '$e')");
+$res = mysqli_query($con, "UPDATE usuarios SET nombre='$n', tipo='$t', precio='$p', existencia='$e' WHERE id='$i'");
 if(mysqli_affected_rows($con)>0)
 {
     $r = "Operacion Exitosa"

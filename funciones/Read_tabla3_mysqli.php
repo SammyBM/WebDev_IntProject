@@ -1,6 +1,6 @@
 <?php
     //Listado de usuarios
-    include("conexionMYSQLI.php");
+    include("../conexionMYSQLI.php");
 
     $sql = mysqli_query($con, "SELECT * FROM productos order by id");
 ?>
@@ -15,6 +15,7 @@
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Stock</th>
+                <th>Caducidad</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -40,6 +41,7 @@
                             '.$row['nombre'].'</a></td>
                             <td>'.$row['precio'].'</td>
                             <td>'.$row['stock'].'</td>
+                            <td>'.$row['caducidad'].'</td>
                         ';
 
                         //ahora las acciones

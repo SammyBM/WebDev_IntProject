@@ -1,6 +1,6 @@
 <?php
     //Listado de usuarios
-    include("conexionPDO.php");
+    include("../conexionPDO.php");
     $sql="SELECT * from usuarios order by id"; //la consulta
     //Preparamos la consulta sql
     $result = $cn->prepare($sql);

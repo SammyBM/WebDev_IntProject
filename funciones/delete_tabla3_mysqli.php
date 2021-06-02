@@ -2,7 +2,7 @@
 require_once("conexion_MYSQLI.php");
 $id = $_GET['nid'];
 
-$sql = "DELETE FROM productos where id=?";
+$sql = "DELETE FROM productos where id='$id'";
 //la consulta
 
 //Preparamos la consulta sql
